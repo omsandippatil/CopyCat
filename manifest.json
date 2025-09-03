@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "CopyCat 🐱",
+  "version": "1.0.0",
+  "description": "Stealth AI Assistant: Alt+C captures ALL page text, Alt+V types human-like responses. Undetectable.",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.groq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "commands": {
+    "copycat_copy": {
+      "suggested_key": { "default": "Alt+C" },
+      "description": "🔍 Capture and analyze page content"
+    },
+    "copycat_paste": {
+      "suggested_key": { "default": "Alt+V" },
+      "description": "⌨️ Type AI response like human"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CopyCat Options 🐱</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Courier New', Consolas, Monaco, 'Lucida Console', monospace;
+      background: #ffffff;
+      color: #000000;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 30px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    
+    .field-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    input, select {
+      width: 100%;
+      padding: 8px;
+      font-family: 'Courier New', Consolas, Monaco, 'Lucida Console', monospace;
+      font-size: 11px;
+      border: 1px solid #000000;
+      background: #ffffff;
+      color: #000000;
+      outline: none;
+    }
+    
+    input:focus, select:focus {
+      border: 2px solid #000000;
+      padding: 7px;
+    }
+    
+    .button-group {
+      margin-top: 30px;
+      display: flex;
+      gap: 10px;
+    }
+    
+    button, #refreshModelsBtn {
+      flex: 1;
+      padding: 10px;
+      font-family: 'Courier New', Consolas, Monaco, 'Lucida Console', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 1px solid #000000;
+      background: #000000;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    
+    #refreshModelsBtn {
+      margin-top: 5px;
+      padding: 5px;
+      font-size: 9px;
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #000000;
+    }
+    
+    #refreshModelsBtn:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+    
+    button:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+    
+    button:active {
+      transform: translateY(1px);
+    }
+    
+    .status {
+      margin-top: 20px;
+      font-size: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .status.show {
+      opacity: 1;
+    }
+    
+    .info {
+      margin-top: 30px;
+      font-size: 10px;
+      color: #666666;
+      text-align: center;
+      line-height: 1.4;
+    }
+    
+    .shortcut {
+      display: inline-block;
+      background: #000000;
+      color: #ffffff;
+      padding: 2px 4px;
+      font-size: 9px;
+      margin: 0 2px;
+    }
+    
+    .groq-link {
+      color: #000000;
+      text-decoration: underline;
+    }
+    
+    .groq-link:hover {
+      background: #000000;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🐱 COPYCAT CONFIG 🐱</h1>
+    
+    <div class="field-group">
+      <label>🔑 GROQ API KEY</label>
+      <input id="apiKey" type="password" placeholder="gsk_..." />
+      <div style="font-size: 9px; color: #666666; margin-top: 5px;">
+        GET YOUR FREE API KEY: <a href="https://console.groq.com/keys" target="_blank" class="groq-link">console.groq.com/keys</a>
+      </div>
+    </div>
+    
+    <div class="field-group">
+      <label>🤖 GROQ MODEL</label>
+      <select id="modelSelect">
+        <option value="">🔑 ENTER API KEY FIRST</option>
+      </select>
+      <button type="button" id="refreshModelsBtn">🔄 REFRESH MODELS</button>
+    </div>
+    
+    <div class="button-group">
+      <button id="saveBtn">💾 SAVE</button>
+      <button id="clearBtn">🗑️ CLEAR</button>
+    </div>
+    
+    <div id="status" class="status"></div>
+    
+    <div class="info">
+      🐾 USAGE:<br>
+      <span class="shortcut">ALT+C</span> CAPTURE PAGE TEXT<br>
+      <span class="shortcut">ALT+V</span> TYPE AI RESPONSE<br><br>
+      😸 STEALTH MODE ENABLED<br>
+      TYPES LIKE HUMAN • NO DETECTION<br><br>
+      POWERED BY <a href="https://groq.com" target="_blank" class="groq-link">GROQ</a>
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>
