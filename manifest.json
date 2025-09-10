@@ -6,7 +6,8 @@
   "permissions": [
     "scripting",
     "activeTab",
-    "storage"
+    "storage", 
+    "contextMenus"
   ],
   "host_permissions": [
     "https://api.groq.com/*"
@@ -17,12 +18,22 @@
   "options_page": "options.html",
   "commands": {
     "copycat_copy": {
-      "suggested_key": { "default": "Alt+C" },
+      "suggested_key": {
+        "default": "Alt+C"
+      },
       "description": "🔍 Capture and analyze page content"
     },
     "copycat_paste": {
-      "suggested_key": { "default": "Alt+V" },
+      "suggested_key": {
+        "default": "Alt+V"
+      },
       "description": "⌨️ Type AI response like human"
+    },
+    "toggle_typing_pause": {
+      "suggested_key": {
+        "default": "Alt+P"
+      },
+      "description": "⏸️ Toggle typing pause/play"
     }
   },
   "icons": {
